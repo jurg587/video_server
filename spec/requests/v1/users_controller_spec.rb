@@ -4,11 +4,11 @@ RSpec.describe V1::UsersController, type: :controller do
   include Docs::V1::UsersDescriptor::Api
 
   describe 'routes' do
-    it { should route(:get, '/users').to(action: :index) }
-    it { should route(:post, '/users/sign_in').to(action: :sign_in) }
-    it { should route(:post, '/users/register').to(action: :register) }
-    it { should route(:put, '/users').to(action: :update) }
-    it { should route(:delete, '/users').to(action: :destroy) }
+    it { should route(:get, 'v1/users').to(action: :index) }
+    it { should route(:post, 'v1/users/sign_in').to(action: :sign_in) }
+    it { should route(:post, 'v1/users/register').to(action: :register) }
+    it { should route(:put, 'v1/users').to(action: :update) }
+    it { should route(:delete, 'v1/users').to(action: :destroy) }
   end
 
   describe 'sign_in' do

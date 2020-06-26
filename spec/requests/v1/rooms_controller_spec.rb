@@ -4,12 +4,12 @@ RSpec.describe V1::RoomsController, type: :controller do
   include Docs::V1::RoomsDescriptor::Api
 
   describe 'routes' do
-    it { should route(:get, '/rooms/61459577-f398-4084-b146-3060acab6b1d').to(action: :show, guid: '61459577-f398-4084-b146-3060acab6b1d') }
-    it { should route(:get, '/rooms/search').to(action: :search) }
-    it { should route(:post, '/rooms').to(action: :create) }
-    it { should route(:post, '/rooms/join').to(action: :join) }
-    it { should route(:delete, '/rooms/leave').to(action: :leave) }
-    it { should route(:put, '/rooms/change_host').to(action: :change_host) }
+    it { should route(:get, 'v1/rooms/61459577-f398-4084-b146-3060acab6b1d').to(action: :show, guid: '61459577-f398-4084-b146-3060acab6b1d') }
+    it { should route(:get, 'v1/rooms/search').to(action: :search) }
+    it { should route(:post, 'v1/rooms').to(action: :create) }
+    it { should route(:post, 'v1/rooms/join').to(action: :join) }
+    it { should route(:delete, 'v1/rooms/leave').to(action: :leave) }
+    it { should route(:put, 'v1/rooms/change_host').to(action: :change_host) }
   end
 
   describe 'show' do
